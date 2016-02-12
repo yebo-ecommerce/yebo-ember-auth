@@ -1,7 +1,7 @@
 {
   "name": "yebo-ember-auth",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.2.2",
+  "description": "Authentication for a Yebo Ember Application.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -9,13 +9,13 @@
   "scripts": {
     "build": "ember build",
     "start": "ember server",
-    "test": "ember try:testall"
+    "test": "ember test"
   },
   "repository": "",
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": ["Hugh Francis", "Yuri Freire", "Gabriel Corado"],
   "license": "MIT",
   "devDependencies": {
     "broccoli-asset-rev": "^2.1.2",
@@ -31,6 +31,7 @@
     "ember-cli-release": "0.2.3",
     "ember-cli-sri": "^1.0.3",
     "ember-cli-uglify": "^1.2.0",
+    "ember-cli-yuidoc": "0.6.2",
     "ember-data": "1.13.8",
     "ember-disable-proxy-controllers": "^1.0.0",
     "ember-export-application-global": "^1.0.3",
@@ -41,7 +42,11 @@
     "ember-addon"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.1.3"
+    "yebo-ember-core": "0.2.2",
+    "yebo-ember-storefront": "0.2.2",
+    "ember-cli-babel": "^5.1.3",
+    "ember-cli-htmlbars": "0.7.9",
+    "ember-simple-auth": "1.0.1"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
