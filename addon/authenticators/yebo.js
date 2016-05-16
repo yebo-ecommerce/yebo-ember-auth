@@ -65,7 +65,7 @@ export default BaseAuthenticator.extend({
     yebo.set('currentOrder', null);
     yebo.set('currentCart', null);
     yebo.set('orderId', null);
-    yebo.set('guestToken', null);
+    // yebo.set('guestToken', null);
 
     console.log('invalidate...');
     return Ember.RSVP.resolve();
