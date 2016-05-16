@@ -1,3 +1,6 @@
+Version 0.3.2:
+
+
 Version 0.3.1:
  - changed my mind, yes remove it, because thus method should invalidate it
  - do not clean guestToken
