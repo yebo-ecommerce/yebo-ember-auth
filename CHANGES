@@ -1,3 +1,10 @@
+Version 0.3.1:
+ - changed my mind, yes remove it, because thus method should invalidate it
+ - do not clean guestToken
+ - bump
+ - Version bump to 0.3.0
+ - bump to version 3 - ready to publish
+
 Version 0.3.0:
  - bump to version 3 - ready to publish
 
