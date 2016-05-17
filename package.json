@@ -1,6 +1,6 @@
 {
   "name": "yebo-ember-auth",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Authentication for a Yebo Ember Application.",
   "directories": {
     "doc": "doc",
