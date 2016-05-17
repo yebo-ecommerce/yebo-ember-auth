@@ -1,3 +1,13 @@
+Version 0.3.3:
+ - validates ci
+ - merge
+ - bumpversion
+ - bumpversion
+ - bump version
+ - Merge tag '0.2.4' into develop
+ - Merge branch 'release/0.2.4'
+ - Version bump to 0.2.4
+
 Version 0.3.2:
 
 
