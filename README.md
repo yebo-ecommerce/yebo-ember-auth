@@ -1,6 +1,7 @@
 # Yebo-ember-auth
 
 This README outlines the details of collaborating on this Ember addon.
+Now with CI
 
 ## Installation
 
