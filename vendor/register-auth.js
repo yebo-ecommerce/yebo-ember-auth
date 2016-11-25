@@ -1,2 +1,2 @@
 /* Yebo Ember Version Placeholder */
-Ember.libraries.register('Yebo Ember Auth', '0.3.4');
+Ember.libraries.register('Yebo Ember Auth', '0.3.5');
