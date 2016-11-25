@@ -1,3 +1,9 @@
+Version 0.3.4:
+ - change circle branch
+ - Merge tag '0.3.3' into develop
+ - Merge branch 'release/0.3.3'
+ - bumpversion
+
 Version 0.3.3:
  - validates ci
  - merge
