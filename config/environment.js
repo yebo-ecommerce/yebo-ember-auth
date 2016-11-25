@@ -5,15 +5,17 @@ module.exports = function(/* environment, appConfig */) {
     "yebo": {
       signinPath: 'signin',
       signupPath: 'signup',
-      accountPath: 'account'
+      accountPath: 'account',
+      afterCompletePath: "yebo.thankyou"
     },
     "ember-simple-auth": {
       localStorageKey: 'yebo-ember:session',
       authorizer: 'ember-simple-auth-authorizer:yebo',
       crossOriginWhitelist: ['http://localhost:3000'],
       authenticationRoute: 'yebo.signin',
-      // routeAfterAuthenticationWithItems: "yebo.checkout",
-      // routeAfterAuthenticationWithoutItems: "yebo.account",
+      routeAfterAuthentication: 'yebo.account',
+      routeAfterAuthenticationWithItems: "yebo.checkout",
+      routeAfterAuthenticationWithoutItems: "yebo.index",
       routeIfAlreadyAuthenticated: "yebo.account"
     }
   };
