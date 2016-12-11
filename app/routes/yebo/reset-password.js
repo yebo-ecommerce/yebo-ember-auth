@@ -56,9 +56,9 @@ export default Ember.Route.extend(UnauthenticatedRouteMixin, {
 
         // Check if the error is an string
         if( typeof errors === 'string' )
-          controller.set('errors', err.errors);
-        else
-          controller.set('errors', err.errors.user.reset_password_token);
+          controller.set('errors', errors);
+
+        controller.set('fullErrors', err.errors.user);
       });
     }
   }
