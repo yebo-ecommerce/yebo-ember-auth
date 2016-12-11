@@ -47,7 +47,7 @@ export default Ember.Route.extend(UnauthenticatedRouteMixin, {
       }
 
       // Call it
-      YeboSDK.Store.fetch('users/reset/reset', options,  'POST').then(() => {
+      YeboSDK.Store.fetch('users/reset/reset', options,  'POST').then(res => {
         // Set as OK!
         controller.set('passwordRested', true);
       }).catch((err) => {
