@@ -30,7 +30,7 @@ export default Ember.Route.extend(UnauthenticatedRouteMixin, {
       // Check if the email is empty
       if( email === undefined ) {
         // Set the errors
-        controller.set('errors', [ { message: 'cannot be empty' } ]);
+        controller.set('errors', [ { message: 'não pode estar vazio' } ]);
 
         // Return
         return;
