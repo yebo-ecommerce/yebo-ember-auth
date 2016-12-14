@@ -49,7 +49,7 @@ export default Ember.Route.extend(UnauthenticatedRouteMixin, {
         // Set as OK!
         controller.set('resetRequested', true);
       }).catch((err) => {
-        controller.set('errors', [ { message: 'is invalid' } ]);
+        controller.set('errors', [ { message: 'não é valido' } ]);
       });
     }
   }
