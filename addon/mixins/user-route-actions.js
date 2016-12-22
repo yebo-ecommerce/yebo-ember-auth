@@ -116,6 +116,8 @@ export default Ember.Mixin.create({
           this.yebo.trigger('didCreateUser', user);
           return this.send('authenticateUser', params, authComponent);
       }).catch(serverError => {
+        // TODO: fix development bug here, it throws this erro:
+        // "Assertion Failed: 'user:ember1250' was saved to the server, but the response does not have an id and your record does not either."
         this.yebo.trigger('userCreateFailed', serverError);
         this.yebo.trigger('serverError', serverError);
         authComponent.set('errors', authComponent.get("user").get("errors"));
