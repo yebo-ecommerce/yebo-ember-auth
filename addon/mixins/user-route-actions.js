@@ -87,11 +87,10 @@ export default Ember.Mixin.create({
       successful authentication.
     */
     authenticateUser: function(params, authComponent) {
-      var _this = this;
       authComponent.set('errors', null);
 
-      return this.get('session').authenticate('ember-simple-auth-authenticator:yebo', params).catch(function(serverError) {
-        authComponent.set('errors', _this.extractAuthErrors(serverError));
+      return this.get('session').authenticate('ember-simple-auth-authenticator:yebo', params).catch(serverError => {
+        authComponent.set('errors', this.extractAuthErrors(serverError));
       });
     },
     /**
@@ -105,21 +104,21 @@ export default Ember.Mixin.create({
       successful create then authenticate.
     */
     createAndAuthenticateUser: function(params, authComponent) {
-      var _this   = this;
+      const that = this;
 
       authComponent.set('errors', null);
-      var newUser = this.yebo.store.createRecord('user', {
+      const newUser = this.yebo.store.createRecord('user', {
         email: params.identification,
         password: params.password,
         passwordConfirmation: params.passwordConfirmation
       });
 
-      newUser.save().then(function(newUser) {
-          _this.yebo.trigger('didCreateUser', newUser);
-          return _this.send('authenticateUser', params, authComponent);
-      }).catch(function(serverError) {
-        _this.yebo.trigger('userCreateFailed', serverError);
-        _this.yebo.trigger('serverError', serverError);
+      newUser.save().then(user => {
+          this.yebo.trigger('didCreateUser', user);
+          return this.send('authenticateUser', params, authComponent);
+      }).catch(serverError => {
+        this.yebo.trigger('userCreateFailed', serverError);
+        this.yebo.trigger('serverError', serverError);
         authComponent.set('errors', authComponent.get("user").get("errors"));
       });
 
