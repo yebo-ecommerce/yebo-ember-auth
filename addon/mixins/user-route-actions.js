@@ -104,9 +104,8 @@ export default Ember.Mixin.create({
       successful create then authenticate.
     */
     createAndAuthenticateUser: function(params, authComponent) {
-      const that = this;
-
       authComponent.set('errors', null);
+
       const newUser = this.yebo.store.createRecord('user', {
         email: params.identification,
         password: params.password,
